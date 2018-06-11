@@ -115,8 +115,6 @@ $ iconfont-gen
 */
 ```
 
-For more in depth documentation see: https://isaxxx.com/works/iconfont-gen/
-
 ## [Changelog](CHANGELOG.md)
 
 ## [License](LICENSE)
