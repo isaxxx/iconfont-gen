@@ -1,0 +1,22 @@
+@font-face {
+  font-family: iconfont;
+  src: url('../fonts/iconfont.woff2') format('woff2'), url('../fonts/iconfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin iconfont ($name: null) {
+  font-family: iconfont;
+  font-style: normal;
+  font-weight: normal;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @if $name == null {
+    content: '';
+  } @else if $name == icon1 {
+    content: '\EA01';
+  } @else if $name == icon2 {
+    content: '\EA02';
+  }
+}

@@ -1,0 +1,20 @@
+@font-face {
+  font-family: <%= name %>;
+  src: url('../fonts/<%= name %>.woff2') format('woff2'), url('../fonts/<%= name %>.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin iconfont ($name: null) {
+  font-family: <%= name %>;
+  font-style: normal;
+  font-weight: normal;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @if $name == null {
+    content: '';
+  }<% glyphs.forEach((glyph) => { %> @else if $name == <%= glyph.name %> {
+    content: '\<%= glyph.codepoint.toString(16).toUpperCase() %>';
+  }<% }); %>
+}
