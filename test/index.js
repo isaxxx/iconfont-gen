@@ -1,6 +1,6 @@
-const iconfontGen = require('../index');
 const test = require('ava');
 const fs = require('fs-extra');
+const iconfontGen = require('../index');
 
 test('exec - case 001', (t) => {
   return iconfontGen({
