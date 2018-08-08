@@ -8,13 +8,15 @@ Generate Iconfont from SVG files.
 
 ## Installation
 
-### npm
+### NPM
 
 ```bash
 $ npm install iconfont-gen --save
 ```
 
 ## Usage
+
+### CLI
 
 ```
 Options:
@@ -27,12 +29,22 @@ Options:
   --help, -h        show this help. [boolean]
 ```
 
-## Example
-
-### CLI
-
 ```bash
 $ iconfont-gen --src ./src/svg/*.svg --dest ./dest/assets/fonts/ --name iconfont --templateInput ./template/index.ejs --templateOutput ./src/scss/_iconfont.scss
+```
+
+### JavaScript
+
+```js
+iconfontGen({
+  src: './src/svg/*.svg',
+  dest: './dest/assets/fonts/',
+  name: 'iconfont',
+  templateInput: './template/index.ejs',
+  templateOutput: './src/scss/_iconfont.scss'
+}).then(() => {
+  console.log('Complete!!');
+});
 ```
 
 ## [Changelog](CHANGELOG.md)
