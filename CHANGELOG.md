@@ -1,3 +1,7 @@
+# 1.1.3 (2018-12-09)
+
+- Fix: package.json for node v10
+
 # 1.1.2 (2018-08-08)
 
 - Fix: readme.txt
